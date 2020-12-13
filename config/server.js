@@ -1,6 +1,6 @@
 // config used by server side only
 const dbHost = process.env.DB_HOST || 'mystore.dcksg.mongodb.net';
-const dbPort = process.env.DB_PORT || '';
+const dbPort = process.env.DB_PORT || '5000';
 const dbName = process.env.DB_NAME || 'shop';
 const dbUser = process.env.DB_USER || 'kav17';
 const dbPass = process.env.DB_PASS || 'qwert147';
@@ -40,10 +40,10 @@ module.exports = {
 		fromAddress: 'vam@test.com'
 	},
 	// key to sign tokens
-	jwtSecretKey: 'qwert',
+	jwtSecretKey: '-',
 
 	// key to sign store cookies
-	cookieSecretKey: 'qwertqwert',
+	cookieSecretKey: '-',
 
 	// path to uploads
 	categoriesUploadPath: 'public/content/images/categories',
