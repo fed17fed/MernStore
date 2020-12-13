@@ -8,7 +8,7 @@ const dbCred =
 	dbUser.length > 0 || dbPass.length > 0 ? `${dbUser}:${dbPass}@` : '';
 
 const dbUrl =
-	process.env.DB_URL || `mongodb+srv://kav17:qwert147/@mystore.dcksg.mongodb.net/shop?retryWrites=true&w=majority`;
+	process.env.DB_URL || `mongodb+srv://kav17:qwert147/@mystore.dcksg.mongodb.net/shop`;
 
 module.exports = {
 	// used by Store (server side)
