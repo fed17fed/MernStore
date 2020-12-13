@@ -1,14 +1,14 @@
 // config used by server side only
-const dbHost = process.env.DB_HOST || '127.0.0.1';
+const dbHost = process.env.DB_HOST || 'mystore.dcksg.mongodb.net';
 const dbPort = process.env.DB_PORT || 27017;
 const dbName = process.env.DB_NAME || 'shop';
-const dbUser = process.env.DB_USER || '';
-const dbPass = process.env.DB_PASS || '';
+const dbUser = process.env.DB_USER || 'kav17';
+const dbPass = process.env.DB_PASS || 'qwert147';
 const dbCred =
 	dbUser.length > 0 || dbPass.length > 0 ? `${dbUser}:${dbPass}@` : '';
 
 const dbUrl =
-	process.env.DB_URL || `mongodb+srv://kav17:qwert147@mystore.dcksg.mongodb.net/shop`;
+	process.env.DB_URL || `mongodb+srv://${dbCred}${dbHost}:${dbPort}/${dbName}`;
 
 module.exports = {
 	// used by Store (server side)
