@@ -8,17 +8,17 @@ const dbCred =
 	dbUser.length > 0 || dbPass.length > 0 ? `${dbUser}:${dbPass}@` : '';
 
 const dbUrl =
-	process.env.DB_URL || `mongodb://${dbCred}${dbHost}:${dbPort}/${dbName}`;
+	process.env.DB_URL || `mongodb+srv://kav17:qwert147/@mystore.dcksg.mongodb.net/<dbname>?retryWrites=true&w=majority`;
 
 module.exports = {
 	// used by Store (server side)
-	apiBaseUrl: `http://localhost:3001/api/v1`,
+	apiBaseUrl: `https://storeexpres.herokuapp.com/api/v1`,
 
 	// used by Store (server and client side)
-	ajaxBaseUrl: `http://localhost:3001/ajax`,
+	ajaxBaseUrl: `https://storeexpres.herokuapp.com/ajax`,
 
 	// Access-Control-Allow-Origin
-	storeBaseUrl: `http://localhost:3000`,
+	storeBaseUrl: `https://storeexpres.herokuapp.com`,
 
 	// used by API
 	adminLoginUrl: '/admin/login',
